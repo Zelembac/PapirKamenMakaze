@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let playerScore = 0;
+        let computerScore = 0;
+        while ( computerScore < 5 && playerScore < 5) {
+        function ComputerPlay () {
+            let brojRPS = Math.floor(Math.random() * 3);
+           const computerChoice = "nista";
+            if (brojRPS == 0) {
+                computerChoice = "Rock";
+            }
+            else if ( brojRPS == 1) {
+                 computerChoice = "Scissors";
+            }
+            else {
+                 computerChoice = "Paper";
+            }
+            return computerChoice;
+        }
+        let playerChoice = prompt("What's your choice?");
+        if (playerChoice == "Rock") {
+                playerChoice = "Rock";
+            }
+            else if ( playerChoice == "Scissors") {
+                 playerChoice = "Scissors";
+            }
+            else if ( playerChoice == "Paper") {
+                 playerChoice = "Paper";
+            }
+            else {
+                alert ('Neprihvatamo izbor.Probajteopet');
+            }
+            
+        
+        
+        if (computerChoice == "Rock" || playerChoice == "Paper") {
+            playerScore++;
+            alert ("Player won")
+
+        }
+        else if (computerChoice == "Paper" || playerChoice == "Paper") {
+            
+            alert ("Draw")
+
+        }
+        else if (computerChoice == "Scissors" || playerChoice == "Paper") {
+            computerScore++;
+            alert ("Computer won")
+
+        }
+        else if (computerChoice == "Rock" || playerChoice == "Rock") {
+            
+            alert ("Draw")
+
+        }
+        else if (computerChoice == "Paper" || playerChoice == "Rock") {
+            computerScore++;
+            alert ("Computer won")
+
+        }
+        else if (computerChoice == "Scissors" || playerChoice == "Rock") {
+            playerScore++;
+            alert ("Player won")
+
+        }
+        else if (computerChoice == "Rock" || playerChoice == "Scissors") {
+            computerScore++;
+            alert ("Computer won")
+
+        }
+        else if (computerChoice == "Paper" || playerChoice == "Scissors") {
+            playerScore++;
+            alert ("Player won")
+
+        }
+        else if (computerChoice == "Scissors" || playerChoice == "Scissors") {
+            
+            alert ("Draw")
+
+        }
+
+        }
+        if (playerScore==5){
+            alert("PLAYER WON")
+        }
+        if (computerScore==5){
+            alert("COMPUTER WON")
+        }
+
+    </script>   
+</body>
+</html>
