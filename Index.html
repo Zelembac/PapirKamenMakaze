@@ -10,10 +10,10 @@
     <script>
         let playerScore = 0;
         let computerScore = 0;
-        while ( computerScore < 5 && playerScore < 5) {
+        while ( computerScore < 5 || playerScore < 5) {
         function ComputerPlay () {
             let brojRPS = Math.floor(Math.random() * 3);
-           const computerChoice = "nista";
+            let computerChoice = "nista";
             if (brojRPS == 0) {
                 computerChoice = "Rock";
             }
@@ -39,60 +39,60 @@
                 alert ('Neprihvatamo izbor.Probajteopet');
             }
             
+         const computerChoice = ComputerPlay()
         
-        
-        if (computerChoice == "Rock" || playerChoice == "Paper") {
+        if (computerChoice == "Rock" && playerChoice == "Paper") {
             playerScore++;
-            alert ("Player won")
+            alert ("Player won");
 
         }
-        else if (computerChoice == "Paper" || playerChoice == "Paper") {
+        else if (computerChoice == "Paper" && playerChoice == "Paper") {
             
-            alert ("Draw")
+            alert ("Draw");
 
         }
-        else if (computerChoice == "Scissors" || playerChoice == "Paper") {
+        else if (computerChoice == "Scissors" && playerChoice == "Paper") {
             computerScore++;
-            alert ("Computer won")
+            alert ("Computer won");
 
         }
-        else if (computerChoice == "Rock" || playerChoice == "Rock") {
+        else if (computerChoice == "Rock" && playerChoice == "Rock") {
             
-            alert ("Draw")
+            alert ("Draw");
 
         }
-        else if (computerChoice == "Paper" || playerChoice == "Rock") {
+        else if (computerChoice == "Paper" && playerChoice == "Rock") {
             computerScore++;
-            alert ("Computer won")
+            alert ("Computer won");
 
         }
-        else if (computerChoice == "Scissors" || playerChoice == "Rock") {
+        else if (computerChoice == "Scissors" && playerChoice == "Rock") {
             playerScore++;
-            alert ("Player won")
+            alert ("Player won");
 
         }
-        else if (computerChoice == "Rock" || playerChoice == "Scissors") {
+        else if (computerChoice == "Rock" && playerChoice == "Scissors") {
             computerScore++;
-            alert ("Computer won")
+            alert ("Computer won");
 
         }
-        else if (computerChoice == "Paper" || playerChoice == "Scissors") {
+        else if (computerChoice == "Paper" && playerChoice == "Scissors") {
             playerScore++;
-            alert ("Player won")
+            alert ("Player won");
 
         }
-        else if (computerChoice == "Scissors" || playerChoice == "Scissors") {
+        else if (computerChoice == "Scissors" && playerChoice == "Scissors") {
             
-            alert ("Draw")
+            alert ("Draw");
 
         }
 
         }
         if (playerScore==5){
-            alert("PLAYER WON")
+            alert("PLAYER WON");
         }
         if (computerScore==5){
-            alert("COMPUTER WON")
+            alert("COMPUTER WON");
         }
 
     </script>   
